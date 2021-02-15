@@ -548,9 +548,9 @@ if (Unwind_FOUND)
   set (Unwind_DEPENDENCY "find_dependency (Unwind ${Unwind_VERSION})")
 endif (Unwind_FOUND)
 
-if (HAVE_DBGHELP)
-   target_link_libraries (glog PUBLIC dbghelp)
-endif (HAVE_DBGHELP)
+
+target_link_libraries (glog PUBLIC dbghelp)
+
 
 if (HAVE_PTHREAD)
   target_link_libraries (glog PUBLIC ${CMAKE_THREAD_LIBS_INIT})
